@@ -67,8 +67,7 @@
                     $version = $props['version'] ?? 'latest';
                 }
             ?>
-            <p>&copy; <?php echo date('Y'); ?> Plain Talk Financial Planning, LLC. All rights reserved.</p>
-            <p style="font-size: 0.75em; color: #777; margin-top: 4px; text-align: right;">v<?php echo htmlspecialchars($version); ?></p>
+            <p style="display: flex; justify-content: space-between; align-items: center;">&copy; <?php echo date('Y'); ?> Plain Talk Financial Planning, LLC. All rights reserved. <span style="font-size: 0.75em; color: #777;">v<?php echo htmlspecialchars($version); ?></span></p>
         </div>
     </div>
 </footer>
