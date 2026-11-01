@@ -599,7 +599,8 @@
             email: email,
             phone: phone,
             message: message,
-            timezone: userTimezone
+            timezone: userTimezone,
+            duration: eventDuration
         }).then(function(data) {
             if (data.error) {
                 showError(data.error);

@@ -6,6 +6,9 @@
 
 require_once __DIR__ . '/calendly-config.php';
 
+chdir($_SERVER['DOCUMENT_ROOT']);
+require_once 'lightspeed/mail.php';
+
 header('Content-Type: application/json');
 
 // Only allow POST requests
@@ -174,11 +177,89 @@ function handleBook($input) {
         return;
     }
 
+    // Send confirmation email with ICS calendar invite
+    $cancelUrl = $result['resource']['cancel_url'] ?? '';
+    $rescheduleUrl = $result['resource']['reschedule_url'] ?? '';
+    $duration = intval($input['duration'] ?? 30);
+
+    $startDt = new \DateTime($startTime, new \DateTimeZone('UTC'));
+    $endDt = clone $startDt;
+    $endDt->modify("+{$duration} minutes");
+
+    $localDt = clone $startDt;
+    $localDt->setTimezone(new \DateTimeZone($timezone));
+
+    $formattedDate = $localDt->format('l, F j, Y');
+    $formattedTime = $localDt->format('g:i A T');
+
+    // Generate ICS calendar invite
+    $uid = uniqid('plaintalk-', true) . '@plaintalkfinancial.com';
+    $dtStamp = gmdate('Ymd\THis\Z');
+    $dtStart = $startDt->format('Ymd\THis\Z');
+    $dtEnd = $endDt->format('Ymd\THis\Z');
+    $fullName = trim($firstName . ' ' . $lastName);
+
+    $icsContent = "BEGIN:VCALENDAR\r\n";
+    $icsContent .= "VERSION:2.0\r\n";
+    $icsContent .= "PRODID:-//Plain Talk Financial Planning//Appointment//EN\r\n";
+    $icsContent .= "METHOD:REQUEST\r\n";
+    $icsContent .= "BEGIN:VEVENT\r\n";
+    $icsContent .= "UID:{$uid}\r\n";
+    $icsContent .= "DTSTAMP:{$dtStamp}\r\n";
+    $icsContent .= "DTSTART:{$dtStart}\r\n";
+    $icsContent .= "DTEND:{$dtEnd}\r\n";
+    $icsContent .= "SUMMARY:Plain Talk Financial Planning - Introductory Meeting\r\n";
+    $icsContent .= "DESCRIPTION:Introductory meeting with Plain Talk Financial Planning. Duration: {$duration} minutes. Format: Video call (Zoom).\r\n";
+    $icsContent .= "ORGANIZER;CN=Bob Foster:mailto:bob@plaintalkfinancial.com\r\n";
+    $icsContent .= "ATTENDEE;CN={$fullName};RSVP=TRUE:mailto:{$email}\r\n";
+    $icsContent .= "LOCATION:Zoom Video Call\r\n";
+    $icsContent .= "STATUS:CONFIRMED\r\n";
+    $icsContent .= "END:VEVENT\r\n";
+    $icsContent .= "END:VCALENDAR\r\n";
+
+    $tmpFile = tempnam(sys_get_temp_dir(), 'cal') . '.ics';
+    file_put_contents($tmpFile, $icsContent);
+
+    // Build confirmation email body
+    $emailBody = "<p>Dear {$firstName},</p>";
+    $emailBody .= "<p>Thank you for scheduling an appointment with Plain Talk Financial Planning.</p>";
+    $emailBody .= "<p><strong>Appointment Details:</strong><br>";
+    $emailBody .= "Date: {$formattedDate}<br>";
+    $emailBody .= "Time: {$formattedTime}<br>";
+    $emailBody .= "Duration: {$duration} minutes<br>";
+    $emailBody .= "Format: Video call (Zoom)</p>";
+    $emailBody .= "<p>A calendar invite is attached for your convenience.";
+    if ($rescheduleUrl || $cancelUrl) {
+        $emailBody .= " If you need to reschedule or cancel, you can do so using the links below:</p>";
+        if ($rescheduleUrl) {
+            $emailBody .= "<p>Reschedule: <a href=\"{$rescheduleUrl}\">{$rescheduleUrl}</a></p>";
+        }
+        if ($cancelUrl) {
+            $emailBody .= "<p>Cancel: <a href=\"{$cancelUrl}\">{$cancelUrl}</a></p>";
+        }
+    } else {
+        $emailBody .= "</p>";
+    }
+    $emailBody .= "<p>We look forward to speaking with you.</p>";
+    $emailBody .= "<p>Kind Regards,</p>";
+    $emailBody .= "<p>Bob Foster<br>Principal Advisor<br>Plain Talk Financial Planning, LLC</p>";
+
+    $plainText = strip_tags(str_replace(['<br>', '</p>'], ["\n", "\n\n"], $emailBody));
+
+    mailer()
+        ->to($email, $fullName)
+        ->subject('Your Appointment with Plain Talk Financial Planning')
+        ->html($emailBody, $plainText)
+        ->attach($tmpFile, 'appointment.ics')
+        ->send();
+
+    unlink($tmpFile);
+
     echo json_encode([
         'success' => true,
         'event_uri' => $result['resource']['event'] ?? '',
-        'cancel_url' => $result['resource']['cancel_url'] ?? '',
-        'reschedule_url' => $result['resource']['reschedule_url'] ?? ''
+        'cancel_url' => $cancelUrl,
+        'reschedule_url' => $rescheduleUrl
     ]);
 }
 
