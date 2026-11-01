@@ -68,7 +68,7 @@
                 }
             ?>
             <p>&copy; <?php echo date('Y'); ?> Plain Talk Financial Planning, LLC. All rights reserved.</p>
-            <p style="font-size: 0.75em; color: #777; margin-top: 4px;">v<?php echo htmlspecialchars($version); ?></p>
+            <p style="font-size: 0.75em; color: #777; margin-top: 4px; text-align: right;">v<?php echo htmlspecialchars($version); ?></p>
         </div>
     </div>
 </footer>
