@@ -1,4 +1,3 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/auth.php'; ?>
 <!DOCTYPE html>
 
 <html class="no-js" lang="en">
