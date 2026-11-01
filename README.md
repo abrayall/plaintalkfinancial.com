@@ -26,21 +26,6 @@ lightspeed stop
 
 ## Deploying
 
-Commits pushed to `main` automatically trigger a deploy via GitHub Actions. The workflow installs Lightspeed and runs `lightspeed deploy`.
+Commits pushed to `main` automatically trigger a deploy via GitHub Actions. The workflow installs Lightspeed and runs `lightspeed deploy`. You can also trigger a deploy manually from the **Actions** tab in GitHub.
 
-You can also trigger a deploy manually from the **Actions** tab in GitHub.
-
-## Versioning
-
-The site version is defined in `version.properties` and displayed in the footer. Update it when tagging a release:
-
-```bash
-# Update version.properties
-echo "version=1.2.3" > version.properties
-
-# Commit, tag, and push
-git add version.properties
-git commit -m "Bump version to 1.2.3"
-git tag v1.2.3
-git push origin main --tags
-```
+The site version shown in the footer is set automatically from the latest git tag at deploy time.

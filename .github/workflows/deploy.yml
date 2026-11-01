@@ -10,6 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set version from git tag
+        run: |
+          VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "latest")
+          VERSION=${VERSION#v}
+          echo "version=${VERSION}" > version.properties
 
       - name: Install Lightspeed
         run: curl -sfL https://raw.githubusercontent.com/abrayall/lightspeed/refs/heads/main/install.sh | sh -
