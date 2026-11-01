@@ -1,0 +1,396 @@
+
+/* ------------------------------------------------------------------
+    Twitter "X" Icon
+   ------------------------------------------------------------------ */
+@font-face {
+    font-family: 'TwitterX';
+    src:
+      url("https://fmg-websites-custom.s3.amazonaws.com/custom-icons/twitterX.woff2") format("woff2"),
+      url("https://fmg-websites-custom.s3.amazonaws.com/custom-icons/twitterX.ttf");
+}
+
+.fa.fa-twitter::before {
+    content: "\e900";
+    font-family: TwitterX;
+}
+
+/* ------------------------------------------------------------------
+    Archiver: Displays all Rotator slides in sections
+   ------------------------------------------------------------------ */
+.no-js .owl-carousel {
+	display: block !important;
+}
+
+.no-js .owl-carousel .c-rotator-item {
+	display: block !important;
+  position: relative !important;
+}
+
+
+/* ------------------------------------------------------------------
+    Visual Editor
+   ------------------------------------------------------------------ */
+.e-page__edit-mode {
+  height: 100%
+}
+
+.e-page__edit-mode a[href="#"] {
+    pointer-events: none;
+}
+
+.e-page__edit-mode a[data-bind] {
+  pointer-events: auto;
+}
+
+/* syndicated section */
+.e-page__edit-mode #site__syndicated-content::before,
+.e-page__edit-mode .site__syndicated-content::before,
+.e-page__edit-mode .c-rich-text__section:has(iframe[onload^="this.before"])::after,
+.e-page__edit-mode .js-complex-editable:has(iframe[onload^="this.before"])::after {
+	content: '⚠️ Reserved for syndicated content. Click the preview website button to see the page content.';
+	display: block;
+	background-color: hsla(36, 100%, 50%, 0.15);
+	padding: 2rem;
+	border-radius: 0.3rem;
+}
+
+
+
+/* ------------------------------------------------------------------
+    DataSection - Design Sections
+   ------------------------------------------------------------------ */
+
+.dev-ds :where(h1, h2, h3, h2 a, h3 a) {
+	color: var(--headingColor, #000);
+	font-weight: var(--headingFontWeight, bold);
+	text-transform: var(--headingTextTransform, none);
+	letter-spacing: var(--headingFontLetterSpacing, normal);
+}
+
+.dev-ds :where(p, li) {
+	color: var(--bodyFontColor, #666);
+}
+
+.dev-ds :where(h1) {
+	--headingLineHeight: 1.2;
+	font-size: var(--heading1FontSize, 3em);
+	line-height: var(--heading1LineHeight, var(--headingLineHeight, initial));
+}
+
+.dev-ds :where(h2) {
+	font-size: var(--heading2FontSize, 2em);
+	line-height: var(--heading2LineHeight, var(--headingLineHeight, initial));
+}
+
+.dev-ds .c-btn {
+	color: var(--btnTextColor, #fff);
+	background: var(--btnBackgroundColor, var(--paletteColor3, inherit));
+	border: var(--btnBorderWidth, 0px) solid var(--btnBorderColor, transparent);
+	border-radius: var(--btnBorderRadius, 0px);
+	font-size: var(--btnFontSize, inherit);
+	text-transform: var(--btnTextTransform, uppercase);
+	font-weight: var(--btnFontWeight, bold);
+	padding: var(--btnPadding, 15px 20px);
+}
+
+.dev-ds .c-btn:hover,
+.dev-ds .c-btn:active,
+.dev-ds .c-btn:focus {
+	color: var(--btnTextHoverColor, #fff);
+	background: var(--btnBackgroundHoverColor, var(--paletteColor2, inherit));
+	border-color: var(--btnBorderHoverColor, transparent);
+}
+
+.dev-ds img {
+	display: block;
+}
+
+.dev-ds_text-center {
+	text-align: center;
+}
+
+.dev-ds_text-white :where(h1, h2, h3, p) {
+	color: #fff;
+}
+
+.dev-ds_text-white :where(.horizontalLine) {
+	--lineColor: #fff;
+}
+
+.dev-ds_text :where(h1, h2, h3) {
+	text-wrap: balance;
+}
+
+.dev-ds_text :where(p) {
+	text-wrap: pretty;
+}
+
+.dev-ds_hero .ds_subheading :where(p) {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+@media (min-width: 992px) {
+	.dev-ds_text :where(p.ds_text-narrow) {
+		max-width: 65ch;
+	}
+
+	.dev-ds_text :where(p.ds_text-center) {
+		margin-inline: auto;
+	}
+}
+
+/* Grids */
+.dev-ds_grid-col-1 .v-grid {
+	--columns: 1;
+	--gap: 0;
+	--justify-items: center;
+
+	--cols-sm: var(--columns);
+	--cols-md: var(--columns);
+	--cols-lg: var(--columns);
+	--cols-xl: var(--columns);
+
+	--ji-lg: var(--justify-items);
+	--ji-xl: var(--justify-items);
+
+	--gap-xs: var(--gap);
+	--gap-sm: var(--gap);
+	--gap-md: var(--gap);
+	--gap-lg: var(--gap);
+	--gap-xl: var(--gap);
+}
+
+.dev-ds_grid-col-2 .v-grid {
+	--align-items: center;
+
+	--cols-sm: 1;
+	--cols-lg: 2;
+	--cols-xl: 2;
+	--ai-lg: var(--align-items);
+	--ai-xl: var(--align-items);
+}
+
+.dev-ds_grid-col-3 .v-grid {
+	--columns: 5;
+	--columns-small: 1;
+
+	--gap: 0;
+	--justify-items: center;
+	--align-items: center;
+
+	--cols-sm: var(--columns-small);
+	--cols-md: var(--columns-small);
+	--cols-lg: var(--columns);
+	--cols-xl: var(--columns);
+
+	--ji-lg: var(--justify-items);
+	--ji-xl: var(--justify-items);
+
+	--ai-lg: var(--align-items);
+	--ai-xl: var(--align-items);
+
+	--gap-xs: var(--gap);
+	--gap-sm: var(--gap);
+	--gap-md: var(--gap);
+	--gap-lg: var(--gap);
+	--gap-xl: var(--gap);
+}
+
+/* CTAs */
+.dev-ds_cta-grid-1-3 .v-grid .ds_col-cta {
+	--col-lg: 1/3;
+	--col-xl: 1/3;
+}
+
+.dev-ds_cta-grid-1-3 .v-grid .ds_col-body {
+	--col-lg: 3/6;
+	--col-xl: 3/6;
+}
+
+@media (min-width: 768px) {
+	.dev-ds_cta-grid-1-3 .v-grid .ds_col-body {
+		padding-left: 2rem;
+	}
+}
+
+/* Building Block Utilities */
+.dev-EnableHorizontalLine .horizontalLine {
+	background: var(--lineColor, var(--paletteColor3));
+	width: var(--ds-horizontal-line-width, 100px);
+	height: var(--ds-horizontal-line-height, 3px);
+	margin: 20px 0;
+}
+
+
+/* ------------------------------------------------------------------
+    DataSection Forms
+   ------------------------------------------------------------------ */
+.dev-ds_form .c-contact__form,
+#customForm .c-contact__form {
+	--contactFormDisplay: block;
+	display: var(--contactFormDisplay);
+}
+
+
+/* Fieldset and Legend Reset  */
+.ds-form fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.ds-form legend {
+	padding: 0;
+	margin-bottom: 5px;
+}
+
+.e-page__edit-mode .ds-form legend {
+	font-size: inherit;
+	color: currentColor;
+	border: 0;
+}
+
+.ds-form .form-item {
+	margin-bottom: 1.5rem;
+	position: relative;
+}
+
+/* Validation Error styles */
+.ds-form .form-item label.error {
+	color: var(--formErrorLabelColor, #c00);
+	font-size: 0.85em;
+}
+
+.ds-form.inline-validation .form-item label.error {
+	position: absolute;
+}
+
+.ds-form input.error,
+.ds-form textarea.error,
+.ds-form select.error {
+	box-shadow: 0 0 5px var(--formErrorColor, #e75344);
+	border: 1px solid var(--formErrorColor, #e75344);
+}
+
+/* required marker */
+.ds-form .form-item.required label:not(.error)::after {
+	content: '*';
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.ds-form .form-item.required-textlabel label:not(.error)::after {
+	content: '(required)';
+	font-size: 0.85em;
+}
+
+/* Form controls */
+.ds-form input[type='checkbox'],
+.ds-form input[type='radio'] {
+	border-color: var(--formBorderColor, #e1e1e1);
+}
+
+.ds-form input[type='text'],
+.ds-form input:where(:not([type])),
+.ds-form input[type='email'],
+.ds-form input[type='url'],
+.ds-form input[type='number'],
+.ds-form input[type='tel'],
+.ds-form input[type='time'],
+.ds-form input[type='week'],
+.ds-form select,
+.ds-form textarea {
+	width: var(--inputWidth, 100%);
+	height: var(--inputHeight, 60px);
+	padding: var(--inputPadding, 20px);
+	border: var(--formBoderWidth, 1px) solid var(--formBorderColor, #e1e1e1);
+	border-radius: var(--formInputBorderRadius, 0px);
+	background-color: var(--formInputBackgroundColor, #fff);
+	outline: none;
+}
+
+.ds-form select {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.ds-form textarea {
+	height: var(--textareaHeight, 100px);
+}
+
+.ds-form--focus-visible input[type='text']:focus-visible,
+.ds-form--focus-visible input:where(:not([type])):focus-visible,
+.ds-form--focus-visible input[type='email']:focus-visible,
+.ds-form--focus-visible input[type='url']:focus-visible,
+.ds-form--focus-visible input[type='number']:focus-visible,
+.ds-form--focus-visible input[type='tel']:focus-visible,
+.ds-form--focus-visible input[type='time']:focus-visible,
+.ds-form--focus-visible input[type='week']:focus-visible,
+.ds-form--focus-visible input[type='checkbox']:focus-visible,
+.ds-form--focus-visible input[type='radio']:focus-visible,
+.ds-form--focus-visible select:focus-visible,
+.ds-form--focus-visible textarea:focus-visible {
+	outline: -webkit-focus-ring-color auto 1px;
+	outline: revert;
+}
+
+/* Visual Editor */
+.e-page__edit-mode .ds-form input,
+.e-page__edit-mode .ds-form textarea,
+.e-page__edit-mode .ds-form select,
+.e-page__edit-mode .ds-form button {
+	pointer-events: none;
+	cursor: pointer;
+}
+
+.e-page__edit-mode form[data-custom-form-section] input[disabled],
+.e-page__edit-mode form[data-custom-form-section] textarea[disabled],
+.e-page__edit-mode form[data-custom-form-section] select[disabled] {
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.e-page__edit-mode form[data-custom-form-section] button[disabled] {
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+/* Checkboxes & Radios */
+.ds-form .checkbox-control,
+.ds-form .radio-control {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--formControlSpace, 12px);
+	width: 100%;
+	align-items: center;
+}
+
+.ds-form:not(.inline-validation) .checkbox-control label.error,
+.ds-form:not(.inline-validation) .radio-control label.error {
+	order: -1;
+	width: 100%;
+	flex-basis: 100%;
+}
+
+.ds-form input[type='checkbox'],
+.ds-form input[type='radio'] {
+	width: auto;
+	margin: 0;
+}
+
+.ds-form .checkbox-control + .checkbox-control,
+.ds-form .radio-control + .radio-control {
+	margin-top: var(--formControlSpace, 12px);
+}
+
+
+/* ------------------------------------------------------------------
+    System Pages
+   ------------------------------------------------------------------ */
+
+/* Tax Rate Update */
+.rateTable table th {
+	width: 20%;
+}
