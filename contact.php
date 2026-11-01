@@ -98,8 +98,8 @@
                                         </div>
                                         <button type="submit" class="c-btn submit">Send Message</button>
                                         <span class="loading"></span>
-                                        <div class="msg formSuccess">Thank you! We'll be in touch soon.</div>
-                                        <div class="msg formError">Something went wrong. Please try again or call us directly.</div>
+                                        <div class="msg formSuccess" style="display:none">Thank you! We'll be in touch soon.</div>
+                                        <div class="msg formError" style="display:none">Something went wrong. Please try again or call us directly.</div>
                                     </form>
                                 </div>
 
