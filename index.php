@@ -232,7 +232,7 @@
                         </div>
                         <div class="serve-card__body">
                             <h3 class="serve-card__title">Individuals and Families</h3>
-                            <p class="serve-card__desc">Develop responsible approaches to current wealth and attaching purpose to money.</p>
+                            <p class="serve-card__desc">Develop responsible approaches to current wealth and attach purpose to money.</p>
 
                         </div>
                     </div>
@@ -247,9 +247,9 @@
 
                                             <div id="box1" class="c-text__section box Text  u-text-align--None">
                                                 
-                                                    <h2 id="section4-box1-title" class="js-simple-editable"  data-section-id=4 data-box-id="1" data-box-type="title">Schedule A Conversation</h2>
+                                                    <h2 id="section4-box1-title" class="js-simple-editable"  data-section-id=4 data-box-id="1" data-box-type="title">Schedule a Conversation</h2>
                                                                                                     <div id="section4-box1-paragraph" class="box-copy js-complex-editable"  data-section-id=4 data-box-id="1" data-box-type="content">
-                                                        <p>If you believe you could benefit from working with a financial professional, let&#8217;s review your portfolio, financial trajectory, and goals to see if we're a good fit together.</p>
+                                                        <p>If you believe you could benefit from working with a financial professional, let&#8217;s review your portfolio, financial trajectory, and goals to see if we&#8217;re a good fit together.</p>
                                                     </div>
                                                                                                     <a href="appointment"
                                                        target='_blank' rel='noopener noreferrer'

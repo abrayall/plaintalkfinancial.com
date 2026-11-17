@@ -72,7 +72,7 @@
                             </div>
                             <div class="service-highlight">
                                 <i class="fa fa-refresh"></i>
-                                <h3>Adapt As Life Changes</h3>
+                                <h3>Adapt as Life Changes</h3>
                                 <p>New job, growing family, or shifting priorities? We revisit and adjust your plan regularly.</p>
                             </div>
                         </div>

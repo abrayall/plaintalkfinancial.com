@@ -3,7 +3,7 @@
                     <div class="process-step">
                         <div class="process-step__number">1</div>
                         <h3 class="process-step__name">Listen</h3>
-                        <p class="process-step__desc">Assess your unique situation. We start by understanding your financial life, your goals, and your vision for the future.</p>
+                        <p class="process-step__desc">We start by understanding your financial life, your goals, and your vision for the future.</p>
                     </div>
                     <div class="process-step">
                         <div class="process-step__number">2</div>
