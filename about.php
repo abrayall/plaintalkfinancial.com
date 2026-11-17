@@ -92,7 +92,7 @@
                             <div class="c-sxs__text u-text-align--None u-pull">
                                 <div class="c-sxs--description">
                                     <h2>About Plain Talk Financial Planning</h2>
-                                    <p>Plain Talk Financial Planning (PTFP) is a Registered Investment Advisory (RIA) firm, principally located in the state of Massachusetts. We act in a fiduciary capacity for our clients, meaning we always put the needs of the client above all else.</p>
+                                    <p>Plain Talk Financial Planning (PTFP) is a Registered Investment Advisor (RIA) firm, principally located in the state of Massachusetts. We act in a fiduciary capacity for our clients, meaning we always put the needs of the client above all else.</p>
                                     <p>We are a fee-only firm, meaning the only compensation we receive is from our clients for our services. PTFP does not accept compensation for the sale of securities or other investment products including asset-based sales charges or service fees from the sale of mutual funds.</p>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                             <div class="c-sxs__text u-text-align--None u-pull">
                                 <h2>You Deserve an Evidence-Based Philosophy</h2>
                                 <div class="c-sxs--description">
-                                    <p>Decisions are driven entirely by evidence, research, and humility &mdash; not emotions nor speculation.</p>
+                                    <p>Decisions are driven entirely by evidence, research, and humility &mdash; not emotions or speculation.</p>
                                     <p>Portfolios are designed to focus on maximizing diversification, low fees, and limiting tax friction. In doing so, we lean on empirical insights to provide more reliable investor outcomes as we plan your future together.</p>
                                 </div>
                             </div>
@@ -174,10 +174,10 @@
                 </div>
             </section>
 
-            <!-- You Deserve to be an Investor -->
+            <!-- You Deserve to Be an Investor -->
             <section class="about-banner about-banner--left">
                 <div class="about-banner__inner">
-                    <h2>You Deserve to be an Investor</h2>
+                    <h2>You Deserve to Be an Investor</h2>
                     <p class="about-banner__subtitle">No matter who you are</p>
                     <div class="about-banner__accent"></div>
                     <p>Investing isn't only for the wealthy. That's why we don't have minimum account requirements.</p>

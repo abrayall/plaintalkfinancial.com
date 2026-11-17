@@ -43,7 +43,7 @@
             <section class="section section_SimpleText None None">
                 <div class="overlay"><div class="o-container c-customsection__container">
                     <div class="service-content">
-                        <p>Insurance is a critical component of any sound financial plan, yet it is often overlooked or not fully understood. At Plain Talk Financial Planning, we review your existing coverage across all major categories including life insurance, disability insurance, homeowners and renters insurance, auto insurance, and umbrella liability policies to make sure you are adequately protected without overpaying.</p>
+                        <p>Insurance is a critical component of any sound financial plan, yet it is often overlooked or not fully understood. At Plain Talk Financial Planning, we review your existing coverage across all major categories, including life insurance, disability insurance, homeowners and renters insurance, auto insurance, and umbrella liability policies to make sure you are adequately protected without overpaying.</p>
                         <p>Our review process identifies gaps where you may be underinsured, as well as areas where you might be carrying unnecessary or redundant coverage. We evaluate whether your policy types, coverage limits, and deductibles are appropriate given your current financial situation, family structure, and risk profile.</p>
                         <p>Because we are a fee-only firm, we do not sell insurance products and we do not earn commissions. This means our recommendations are always objective. When you need a policy, we help you understand what to look for and can refer you to trusted providers, but the decision is always yours.</p>
                     </div>
