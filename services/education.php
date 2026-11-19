@@ -11,7 +11,7 @@
 <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Plain Talk Financial Planning"/>
 <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://www.plaintalkfinancial.com/services/education"/>
 <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "FinancialService", "@id": "https://www.plaintalkfinancial.com", "name": "Plain Talk Financial Planning", "logo": "/images/logo.png", "image": "/images/logo.png", "url": "https://www.plaintalkfinancial.com", "telephone": "978-992-8772", "priceRange": "N/A", "address": { "@type": "PostalAddress", "streetAddress": "14 Sanborn Terrace", "addressLocality": "Amesbury", "addressRegion": "MA", "postalCode": "01913", "addressCountry": "US" } }
+    { "@context": "https://schema.org", "@type": "FinancialService", "@id": "https://www.plaintalkfinancial.com", "name": "Plain Talk Financial Planning", "logo": "/images/logo.png", "image": "/images/logo.png", "url": "https://www.plaintalkfinancial.com", "telephone": "978-992-8772", "priceRange": "N/A", "address": { "@type": "PostalAddress", "addressLocality": "Amesbury", "addressRegion": "MA", "postalCode": "01913", "addressCountry": "US" } }
 </script>
 <link rel="stylesheet" type="text/css" media="" href="/css/vendor/7ac.css" />
 <link rel="stylesheet" type="text/css" href="/css/vendor/global-asset-styles.css" />
