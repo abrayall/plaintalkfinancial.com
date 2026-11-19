@@ -47,7 +47,6 @@
   "priceRange": "N/A",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "14 Sanborn Terrace",
     "addressLocality": "Amesbury",
     "addressRegion": "MA",
     "postalCode": "01913",
@@ -56,7 +55,6 @@
   "location": [
     {
       "@type": "PostalAddress",
-      "streetAddress": "14 Sanborn Terrace",
       "addressLocality": "Amesbury",
       "addressRegion": "MA",
       "postalCode": "01913",

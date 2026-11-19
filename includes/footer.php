@@ -41,7 +41,7 @@
                 <ul class="site-footer__contact-list">
                     <li><i class="fa fa-phone"></i> <a href="tel:9789928772">978-992-8772</a></li>
                     <li><i class="fa fa-envelope"></i> <a href="mailto:bob@plaintalkfinancial.com">bob@plaintalkfinancial.com</a></li>
-                    <li><i class="fa fa-map-marker"></i> 14 Sanborn Terrace<br>Amesbury, MA 01913</li>
+                    <li><i class="fa fa-map-marker"></i> Amesbury, MA 01913</li>
                 </ul>
             </div>
         </div>
