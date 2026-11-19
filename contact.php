@@ -146,7 +146,7 @@
                                         <iframe frameborder="0" style="border: 0; width: 100%; height: 100%; min-height: 280px; border-radius: 12px;"
                                                 loading="lazy"
                                                 referrerpolicy="no-referrer-when-downgrade"
-                                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAay01fDG_xOQcXm6NWQESXQsDfPjzQFsY&q=14+Sanborn+Terrace+Amesbury+MA+01913"
+                                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAay01fDG_xOQcXm6NWQESXQsDfPjzQFsY&q=Amesbury+MA"
                                                 allowfullscreen>
                                         </iframe>
                                     </div>
